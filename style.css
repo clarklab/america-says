@@ -130,8 +130,71 @@ ol li.active a:before{
   background: #fff;
 }
 
-ol li:last-child{
+body:not(.home) ol li:last-child, body:not(.home) ol li:first-child{
   display: none;
 }
 
+body.home{
+align-items: center;
+}
 
+.logo{
+  font-size:8vw;
+  font-weight:bold;
+  font-family: "Roboto Condensed";
+  margin: 2rem 3rem;
+  padding: 2rem;
+  font-style: italic;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0,0.5);
+  position: relative;
+  letter-spacing: -1.5px;
+}
+
+.logo:after{
+  position:absolute;
+  top: 0;
+  bottom:0;
+  left:0;
+  right:0;
+  background: #d50000;
+  content:" ";
+  display:block;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0,0.5);
+  border: 8px solid #fdd835;
+  z-index: -1;
+  transform: skew(-8deg);
+}
+
+.logo:before{
+  font-size:5vw;
+  position:absolute;
+  background: #d50000;
+  content:"HOME EDITION";
+  display:block;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0,0.5);
+  border: 8px solid #fdd835;
+  z-index: -1;
+  transform: skew(-8deg);
+  z-index: 10;
+  padding: 0 2rem;
+  right: -4vw;
+  bottom: -4vw;
+}
+
+body.home ul{
+  position: absolute;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  bottom: 2rem;
+  left: 2rem;
+  right: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+body.home ul a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 2vw;
+}
