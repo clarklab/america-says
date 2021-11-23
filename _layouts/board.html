@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>America Says</title>
+  <link rel="stylesheet" href="../style.css">
+
+</head>
+<body>
+
+<ol>
+{% for node in site.pages %}
+    {% if page.url == node.url %}
+      <li class="active"><a href="{{node.url}}" class="active">&nbsp;</a></li>
+    {% else %}
+      <li><a href="{{node.url}}">&nbsp;</a></li>
+    {% endif %}
+  {% endfor %}
+</ol>
+
+  <div class="wrong">
+X
+  </div>
+
+<div class="question">
+  {{ page.question }}
+</div>
+
+<div class="answers">
+
+{% for answer in page.answers %}
+<div class="answer">
+  <div class="text">{{ answer }}</div>
+</div>
+{% endfor %}
+
+</div>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script><script  src="../script.js"></script>
+
+</body>
+</html>
