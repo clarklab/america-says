@@ -9,14 +9,20 @@
 <body>
 
 <ol>
-{% for node in site.pages %}
-    {% if page.url == node.url %}
-      <li class="active"><a href="{{node.url}}" class="active">&nbsp;</a></li>
-    {% else %}
-      <li><a href="{{node.url}}">&nbsp;</a></li>
-    {% endif %}
-  {% endfor %}
+{% for item in site.pages %}
+      {% assign item_crumbs = item.url | remove_first: page.dir | split: '/' %}
+  {% if page.url == item.url %}
+      <li class="active">
+  {% else %}
+      <li>
+  {% endif %}
+        <a href="{{ item.url | relative_url }}">&nbsp;</a>
+      </li>
+   
+{% endfor %}
 </ol>
+
+
 
   <div class="wrong">
 X
