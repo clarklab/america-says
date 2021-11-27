@@ -1,14 +1,8 @@
 // setup sound effect for correct answers
-function playCorrect() {
-  var audio = new Audio('../correct.m4a');
-  audio.play();
-}
+var audioCorrect = new Audio('../correct.m4a');
 
 // setup sound effect for wrong answers
-function playWrong() {
-  var audio = new Audio('../wrong.m4a');
-  audio.play();
-}
+var audioWrong = new Audio('../wrong.m4a');
 
 // reveal the correct answer on click 
 $('.answer').on('click', function(e) {
@@ -17,7 +11,7 @@ $('.answer').on('click', function(e) {
 
 // play the sound effect on correct answer
 $('.answer').click(function() {
-  playCorrect();
+  audioCorrect.play();
 });
 
 // keyboard shortcuts
@@ -50,7 +44,7 @@ $(document).on('keypress',function(e) {
 
 // play sound effect and flash X for wrong answer
   if(e.which == 32) {
-    playWrong();
+    audioWrong.play();
     $(".wrong").animate({opacity:1},100).delay(100).animate({opacity:0},100)
   }
 
