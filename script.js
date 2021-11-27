@@ -1,16 +1,14 @@
 // setup sound effect for correct answers
 var audioCorrect = new Audio('../correct.m4a');
+audioCorrect.loop = false;
 
 // setup sound effect for wrong answers
 var audioWrong = new Audio('../wrong.m4a');
+audioWrong.loop = false;
 
-// reveal the correct answer on click 
+// reveal the correct answer and play sound effect on click 
 $('.answer').on('click', function(e) {
   $(this).toggleClass("reveal");
-});
-
-// play the sound effect on correct answer
-$('.answer').click(function() {
   audioCorrect.play();
 });
 
