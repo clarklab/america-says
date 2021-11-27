@@ -7,7 +7,8 @@ var audioWrong = new Audio('../wrong.m4a');
 // reveal the correct answer and play sound effect on click 
 $('.answer').on('click', function(e) {
   $(this).toggleClass("reveal");
-  audioCorrect.load();
+  audioCorrect.pause();
+  audioCorrect.currentTime = 0;
   audioCorrect.play();
 });
 
