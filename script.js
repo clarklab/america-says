@@ -2,6 +2,11 @@ $('.answer').on('click', function(e) {
   $(this).toggleClass("reveal");
 });
 
+function playCorrect() {
+  var audio = new Audio('../correct.m4a');
+  audio.play();
+}
+
 var audioElement = document.createElement('audio');
 audioElement.setAttribute('src', '../correct.m4a');
 
@@ -24,7 +29,7 @@ audioElementWrong.play();
 
 
 $('.answer').click(function() {
-audioElement.play();
+  playCorrect();
 });
 
 
