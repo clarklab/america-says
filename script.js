@@ -7,34 +7,14 @@ function playCorrect() {
   audio.play();
 }
 
-var audioElement = document.createElement('audio');
-audioElement.setAttribute('src', '../correct.m4a');
-
-var audioElementWrong = document.createElement('audio');
-audioElementWrong.setAttribute('src', '../wrong.m4a');
-
-
-
-//audioElement.load()
-$.get();
-audioElement.addEventListener("load", function() {
-audioElement.play();
-}, true);
-
-$.get();
-audioElementWrong.addEventListener("load", function() {
-audioElementWrong.play();
-}, true);
-
+function playWrong() {
+  var audio = new Audio('../wrong.m4a');
+  audio.play();
+}
 
 
 $('.answer').click(function() {
   playCorrect();
-});
-
-
-$('.pause').click(function() {
-audioElement.pause();
 });
 
 
@@ -53,7 +33,7 @@ $(document).on('keypress',function(e) {
   }
 
     if(e.which == 32) {
-      audioElementWrong.play();
+      playWrong();
       $(".wrong").animate({opacity:1},100).delay(100).animate({opacity:0},100)
     }
 
