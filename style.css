@@ -34,10 +34,10 @@ body{
 }
 
 .question{
-  font-size:5vw;
+  font-size:4vw;
   font-weight:bold;
   font-family: "Roboto Condensed";
-  margin: 2rem 3rem;
+  margin: 0 3rem 2rem;
   padding: 2rem;
   font-style: italic;
   text-shadow: 4px 4px 4px rgba(0, 0, 0,0.5);
@@ -61,20 +61,20 @@ body{
 }
 
 .answer{
-  font-size:8vw;
+  font-size:7vw;
   font-weight:bold;
   position:relative;
   display:inline-block;
   transition:.3s ease all;
   overflow:hidden;
-  margin: 0 2rem 2rem;
+  margin: 0 3rem 3rem;
   cursor: pointer;
   line-height: 1;
   text-shadow: 4px 4px 4px rgba(0, 0, 0,0.5);
 }
 .answer .text{
   transition:.3s ease all;
-  clip-path: inset(0 calc(100% - 4.75vw) 0 0);
+  clip-path: inset(0 calc(100% - 4.25vw) 0 0);
 }
 
 .answer.reveal .text{
