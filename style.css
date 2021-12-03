@@ -230,10 +230,14 @@ body{
   margin-bottom: .5rem;
 }
 
-.answer .text::before {
+.answer::before {
   counter-increment: section;
   content: counter(section)" ";
   opacity: 0.5;
+}
+
+.answer.space .underline{
+  margin-right: 3vw;
 }
 
 .wrong{
