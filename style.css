@@ -101,7 +101,6 @@ body{
   font-weight:700;
   position:relative;
   display:inline-block;
-  transition:.3s ease all;
   overflow:hidden;
   margin: 0 3rem 3rem;
   cursor: pointer;
@@ -109,7 +108,7 @@ body{
   text-shadow: 4px 4px 4px rgba(0, 0, 0,0.5);
 }
 .answer .text{
-  transition:.3s ease all;
+  transition:.3s ease clip-path;
   clip-path: inset(0 calc(100% - 4.25vw) 0 0);
 }
 
@@ -126,17 +125,12 @@ body{
   background:#fdd835;
   content:" ";
   display:block;
-  transition:.3s ease all;
+  transition:.3s ease left;
   box-shadow: 4px 4px 4px rgba(0, 0, 0,0.5);
 }
 
 .answer.reveal:after{
  left:100%;
-}
-
-
-body:not(.home) ol li:last-child, body:not(.home) ol li:first-child{
-  display: none;
 }
 
 body.home{

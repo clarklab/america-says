@@ -25,7 +25,8 @@ twitter_username: jekyllrb
 github_username:  jekyll
 
 collections:
-  - sample
+  sample:
+    output: true
 
 # Build settings
 markdown: kramdown

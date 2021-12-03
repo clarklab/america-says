@@ -17,27 +17,27 @@ $(document).on('keypress',function(e) {
 
 // navigation between questions
   if ( e.ctrlKey && ( e.which === 49 ) ) {
-    window.location.href = "question-1.html";
+    window.location.href = $('ol.nav li:first-child a').attr('href');
   }
 
   if ( e.ctrlKey && ( e.which === 50 ) ) {
-    window.location.href = "question-2.html";
+    window.location.href = $('ol.nav li:nth-child(2) a').attr('href');
   }
 
   if ( e.ctrlKey && ( e.which === 51 ) ) {
-    window.location.href = "question-3.html";
+    window.location.href = $('ol.nav li:nth-child(3) a').attr('href');;
   }
 
   if ( e.ctrlKey && ( e.which === 52 ) ) {
-    window.location.href = "question-4.html";
+    window.location.href = $('ol.nav li:nth-child(4) a').attr('href');
   }
 
   if ( e.ctrlKey && ( e.which === 53 ) ) {
-    window.location.href = "question-5.html";
+    window.location.href = $('ol.nav li:nth-child(5) a').attr('href');
   }
 
   if ( e.ctrlKey && ( e.which === 54 ) ) {
-    window.location.href = "question-6.html";
+    window.location.href = $('ol.nav li:nth-child(6) a').attr('href');
   }
 
 // play sound effect and flash X for wrong answer
