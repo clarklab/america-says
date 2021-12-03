@@ -141,6 +141,24 @@ body{
  left:100%;
 }
 
+.verbose .answer{
+  font-size: 3.75vw;
+}
+.verbose .answer .text{
+  clip-path: inset(0 calc(100% - 2.25vw) 0 0);
+}
+.verbose .answer.reveal .text{
+  clip-path: inset(0 0 0 0);
+}
+.verbose .answer .underline:after{
+  left:calc(0% + 2.5vw);
+  height: 6px;
+  bottom: 10px;
+}
+.verbose .answer.reveal .underline:after{
+ left:100%;
+}
+
 .answer.space .underline:not(:first-child){
 margin-left: 2vw;
 }

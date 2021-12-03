@@ -11,7 +11,15 @@
   <link rel="stylesheet" href="../style.css">
 
 </head>
-<body>
+
+  {% assign characters = 0 %}
+  {% for answer in page.answers %}
+  {% assign more = [answer | size] %}
+  {% assign characters = characters | plus:more %}
+  {% endfor %}
+
+<body class="{% if characters > 80 %}verbose{% endif %}">
+
 
 <a href="/" class="home-link">
 <span class="material-icons">
