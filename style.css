@@ -205,16 +205,26 @@ body.home ul a{
 body{
   counter-reset: section;
   font-family:"Roboto Mono";
-  font-size: 5vw;
+  font-size: 6vw;
+  text-transform: uppercase;
+  padding: 1rem;
 }
 
 .question{
   margin-bottom: 2rem;
+  font-size: 7vw;
+  font-family: "Roboto Condensed";
+  font-style: italic;
+  letter-spacing: -1.5px;
+}
+
+.answer{
+  margin-bottom: .5rem;
 }
 
 .answer .text::before {
   counter-increment: section;
-  content: counter(section)". ";
+  content: counter(section)" ";
   opacity: 0.5;
 }
 
@@ -227,8 +237,8 @@ ol.nav{
 }
 
 ol.nav li a:before{
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   background: rgba(0,0,0,0.25);
 }
 
