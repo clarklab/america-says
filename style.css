@@ -70,7 +70,7 @@ body{
 }
 
 .question{
-  font-size:4vw;
+  font-size:3.5vw;
   font-weight:700;
   font-family: "Roboto Condensed";
   margin: 0 3rem 4rem;
@@ -192,7 +192,7 @@ align-items: center;
   bottom: -4vw;
 }
 
-body.home ul{
+body.home ul.games{
   position: absolute;
   list-style: none;
   display: flex;
@@ -204,10 +204,11 @@ body.home ul{
   margin: 0;
 }
 
-body.home ul a{
+body.home ul.games a{
   color: #fff;
   text-decoration: none;
   font-size: 2vw;
+  padding: 0 1rem;
 }
 
 }

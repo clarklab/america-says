@@ -27,6 +27,8 @@ github_username:  jekyll
 collections:
   sample:
     output: true
+  s01e01:
+    output: true
 
 # Build settings
 markdown: kramdown

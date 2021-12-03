@@ -12,7 +12,7 @@
 <body>
 
 <ol class="nav">
-{% for item in site.sample %}
+{% for item in site.[page.collection] %}
 
   {% if item.url contains page.collection %}
 
