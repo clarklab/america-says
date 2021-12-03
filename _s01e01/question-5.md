@@ -5,8 +5,8 @@ answers:
   - Dolly Parton
   - Garth Brooks
   - George Strait
+  - Johnny Cash
   - Carrie Underwood
   - Reba McEntire
-  - Johnny Cash
   - Blake Shelton
 ---

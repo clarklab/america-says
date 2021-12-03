@@ -29,6 +29,10 @@ collections:
     output: true
   s01e01:
     output: true
+  s01e02:
+    output: true
+  s01e03:
+    output: true
 
 # Build settings
 markdown: kramdown

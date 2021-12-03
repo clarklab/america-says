@@ -211,6 +211,18 @@ body.home ul.games a{
   padding: 0 1rem;
 }
 
+.home-link{
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  color: #fff;
+  font-size: 3vw;
+  opacity: .5;
+}
+.home-link .material-icons{
+  font-size: 2vw;
+}
+
 }
 
 @media (orientation: portrait) {
