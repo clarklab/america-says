@@ -40,9 +40,25 @@ X
 <div class="answers">
 
 {% for answer in page.answers %}
+
+{% if answer contains " " %}
+
+{% assign answerSpace = answer | split:' ' %}
+<div class="answer space">{% for answer in answerSpace %}<span class="underline"><span class="text">{{answer}}</span></span>{% endfor %}</div>
+
+{% elsif answer contains "-" %}
+
+{% assign count = 0 %}
+{% assign answerDash = answer | split:'-' %}
+<div class="answer dash">{% for answer in answerDash %}{% assign count = count | plus: 1 %}<span class="underline"><span class="text">{{answer}}</span></span>{% if count == 1 %}-{% endif %}{% endfor %}</div>
+
+{% else %}
 <div class="answer">
-  <div class="text">{{ answer }}</div>
+  <span class="underline">
+    <span class="text">{{ answer }}</span>
+  </span>
 </div>
+{% endif %}
 {% endfor %}
 
 </div>

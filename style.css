@@ -116,9 +116,13 @@ body{
   clip-path: inset(0 0 0 0);
 }
 
-.answer:after{
+.answer .underline{
+  position: relative;
+}
+
+.answer .underline:after{
   position:absolute;
-  bottom:0;
+  bottom:16px;
   left:calc(0% + 4.85vw);
   right:0;
   height:8px;
@@ -129,8 +133,12 @@ body{
   box-shadow: 4px 4px 4px rgba(0, 0, 0,0.5);
 }
 
-.answer.reveal:after{
+.answer.reveal .underline:after{
  left:100%;
+}
+
+.answer.space .underline:not(:first-child){
+margin-left: 2vw;
 }
 
 body.home{

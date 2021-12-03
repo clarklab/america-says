@@ -3,7 +3,7 @@ layout: board
 question: People can eat ___________ in one bite
 answers:
   - popcorn
-  - donuts
+  - hot-dogs
   - chips
   - shrimp
   - candy
