@@ -33,6 +33,8 @@ collections:
     output: true
   s01e03:
     output: true
+  s01e04:
+    output: true
 
 # Build settings
 markdown: kramdown

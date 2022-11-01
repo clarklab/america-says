@@ -30,6 +30,15 @@ ol.nav li a:before{
 
 ol.nav li.active a:before{
   background: #fff;
+  outline: 2px solid white;
+}
+
+ol.nav li a[data-url="final"]:before{
+  background: #fdd835;
+}
+
+ol.nav li.active a[data-url="final"]:before{
+  outline: 2px solid white;
 }
 
 @media (orientation: landscape) {
@@ -293,3 +302,4 @@ ol.nav li.active a:before{
   background: #000;
 }
 }
+

@@ -37,7 +37,9 @@ home
   {% else %}
       <li>
   {% endif %}
-        <a href="{{ item.url }}">&nbsp;</a>
+
+
+        <a data-url="{{ item.url | slice: 8, 5 }}" href="{{ item.url }}">&nbsp;</a>
       </li>
 
 {% endif%}   
