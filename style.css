@@ -4,7 +4,7 @@ ol.nav{
   position: absolute;
   list-style: none;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   bottom: 2rem;
   left: 2rem;
@@ -33,11 +33,11 @@ ol.nav li.active a:before{
   outline: 2px solid white;
 }
 
-ol.nav li a[data-url="final"]:before{
+ol.nav li a[data-url="turbo"]:before{
   background: #fdd835;
 }
 
-ol.nav li.active a[data-url="final"]:before{
+ol.nav li.active a[data-url="turbo"]:before{
   outline: 2px solid white;
 }
 
@@ -219,23 +219,12 @@ align-items: center;
   bottom: -4vw;
 }
 
-body.home ul.games{
+body.home .games{
   position: absolute;
-  list-style: none;
-  display: flex;
-  justify-content: center;
   bottom: 2rem;
-  left: 2rem;
-  right: 2rem;
   padding: 0;
   margin: 0;
-}
-
-body.home ul.games a{
-  color: #fff;
-  text-decoration: none;
-  font-size: 2vw;
-  padding: 0 1rem;
+  font-size: 1.25rem;
 }
 
 .home-link{
