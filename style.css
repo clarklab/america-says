@@ -28,14 +28,12 @@ ol.nav li a:before{
   display: block;
 }
 
-ol.nav li:first-child a:before, ol.nav li:nth-child(3) a:before, ol.nav li:nth-child(5) a:before{
-  border-radius: 100px 0 0 100px;
+ol.nav li:nth-child(2) a:before, ol.nav li:nth-child(4) a:before, ol.nav li:nth-child(6) a:before{
+  margin-right: .8rem;
 }
 
-ol.nav li:nth-child(2) a:before, ol.nav li:nth-child(4) a:before, ol.nav li:nth-child(6) a:before{
-  border-radius: 0 100px 100px 0;
-  position: relative;
-  left: -.4rem;
+ol.nav li:nth-child(1) a:before, ol.nav li:nth-child(3) a:before, ol.nav li:nth-child(5) a:before{
+  margin-right: 0;
 }
 
 ol.nav li.active a:before{
