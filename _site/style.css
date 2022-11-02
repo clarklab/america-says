@@ -14,31 +14,40 @@ ol.nav{
 ol.nav li{
   position: relative;
   margin: .4rem;
-  height: 10px;
+  height: 16px;
 }
 ol.nav li a{
   text-decoration: none;
 }
 ol.nav li a:before{
-  width: 10px;
-  height: 10px;
+  width: 16px;
+  height: 16px;
   border-radius: 100px;
   background: rgba(255,255,255,0.5);
   content: " ";
   display: block;
 }
 
+ol.nav li:first-child a:before, ol.nav li:nth-child(3) a:before, ol.nav li:nth-child(5) a:before{
+  border-radius: 100px 0 0 100px;
+}
+
+ol.nav li:nth-child(2) a:before, ol.nav li:nth-child(4) a:before, ol.nav li:nth-child(6) a:before{
+  border-radius: 0 100px 100px 0;
+  position: relative;
+  left: -.4rem;
+}
+
 ol.nav li.active a:before{
   background: #fff;
-  outline: 2px solid white;
 }
 
 ol.nav li a[data-url="turbo"]:before{
-  background: #fdd835;
+  background: rgba(255,255,255,0.5);
 }
 
 ol.nav li.active a[data-url="turbo"]:before{
-  outline: 2px solid white;
+  background: #fdd835;
 }
 
 @media (orientation: landscape) {
@@ -227,16 +236,13 @@ body.home .games{
   font-size: 1.25rem;
 }
 
-.home-link{
+.home-link .material-symbols-sharp{
   position: absolute;
   bottom: 2rem;
   right: 2rem;
   color: #fff;
-  font-size: 3vw;
+  font-size: 34px;
   opacity: .5;
-}
-.home-link .material-icons{
-  font-size: 2vw;
 }
 
 }
