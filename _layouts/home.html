@@ -18,10 +18,10 @@
 
 <select class="games" name='m-menu' onfocus="this.selectedIndex = 0" onchange='location = this.options[this.selectedIndex].value;'>
       <option value="">Select an Episode</option>
-    {% for collection in site.collections reversed %}
+    {% for collection in site.collections %}
     {% for item in site[collection.label] %}
       {% if forloop.first == true %}
-        <option value='{{ item.url }}'>{{ collection.label }}</option>
+        <option value='{{ item.url }}'>{{ collection.label | upcase }}</option>
       {% endif %}
     {% endfor %}
     {% endfor %}

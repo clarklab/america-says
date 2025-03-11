@@ -10,6 +10,7 @@ ol.nav{
   left: 2rem;
   padding: 0;
   margin: 0;
+  z-index: 100;
 }
 ol.nav li{
   position: relative;
@@ -60,6 +61,7 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   height: 100vh;
   overflow: hidden;
 }
@@ -68,6 +70,17 @@ body{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.turbo .answers{
+  justify-content:left;
+  flex-direction: column;
+  align-items: start;
+  width: auto;
+}
+
+.turbo .answer{
+  margin: 0 3rem 1rem;
 }
 
 .wrong{
@@ -95,6 +108,10 @@ body{
   text-shadow: 4px 4px 4px rgba(0, 0, 0,0.5);
   position: relative;
   letter-spacing: -1.5px;
+}
+
+.turbo .question{
+ margin-bottom:2rem;
 }
 
 .question:after{
@@ -128,7 +145,7 @@ body{
   clip-path: inset(0 calc(100% - 3.35vw) 0 0);
 }
 
-.answer:nth-child(even){
+body:not(.turbo) .answer:nth-child(even){
   margin-top: 2rem;
 }
 
@@ -159,6 +176,7 @@ body{
 
 .verbose .answer{
   font-size: 3.75vw;
+  margin-bottom:2rem;
 }
 .verbose .answer .text{
   clip-path: inset(0 calc(100% - 2.25vw) 0 0);
@@ -187,12 +205,14 @@ align-items: center;
   font-size:8vw;
   font-weight:700;
   font-family: "Roboto Condensed";
-  margin: 2rem 3rem;
+  margin: 0rem 3rem;
   padding: 2rem;
   font-style: italic;
   text-shadow: 4px 4px 4px rgba(0, 0, 0,0.5);
   position: relative;
   letter-spacing: -1.5px;
+  top:-2rem;
+  left:-1rem;
 }
 
 .logo:after{
@@ -296,3 +316,54 @@ ol.nav li.active a:before{
 }
 }
 
+
+/* White border that is always visible */
+.border-empty {
+  position: fixed;
+  background-color: transparent;
+  z-index: 9999; /* below fill overlay */
+}
+.border-empty.top {
+  top: 0; left: 0;
+  width: 100%; height: 15px;
+}
+.border-empty.right {
+  top: 0; right: 0;
+  width: 15px; height: 100%;
+}
+.border-empty.bottom {
+  bottom: 0; left: 0;
+  width: 100%; height: 15px;
+}
+.border-empty.left {
+  top: 0; left: 0;
+  width: 15px; height: 100%;
+}
+
+/* Red overlay that fills in over time */
+.border-fill {
+  position: fixed;
+  background-color: red;
+  z-index: 10000; /* above the white border */
+}
+
+/* 
+  We start each "fill" at zero,
+  then animate it (in JS) along the perimeter.
+*/
+.border-fill.top {
+  top: 0; left: 0;
+  width: 0; height: 15px;  /* fill left → right */
+}
+.border-fill.right {
+  top: 0; right: 0;
+  width: 15px; height: 0;  /* fill top → bottom */
+}
+.border-fill.bottom {
+  bottom: 0; right: 0;
+  width: 0; height: 15px;  /* fill right → left */
+}
+.border-fill.left {
+  bottom: 0; left: 0;
+  width: 15px; height: 0;  /* fill bottom → top */
+}
