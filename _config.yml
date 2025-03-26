@@ -46,6 +46,8 @@ collections:
     output: true
   s01e07:
     output: true
+  s01e08:
+    output: true
 
 # Build settings
 theme: minima
