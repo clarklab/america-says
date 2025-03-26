@@ -27,6 +27,8 @@
   <div class="border-fill left" id="fill-left"></div>
 
   <audio id="wrong-sound" src="../wrong.m4a" preload="auto"></audio>
+  <audio id="end-sound" src="../end.mp3" preload="auto"></audio>
+
 
 
 
@@ -218,104 +220,132 @@ X
 </div>
 
 <script>
-    let timerStarted = false;  // Has the user pressed Enter at least once?
-    let isPaused = false;      // Is the timer currently paused?
-    let intervalId = null;
+  let timerStarted = false;
+  let isPaused = false;
+  let intervalId = null;
 
-    // Timer-related variables
-    let elapsed = 0;                   // how many seconds have passed
-    const maxTime = 30;                // total time for the countdown
-    const updateFrequency = 100;       // update every 100 ms
+  const isTurbo = document.body.classList.contains("turbo");
+  const turboCookieKey = "turboTime";
 
-    // Updates the red fill bars based on 'elapsed' time
-    function updateFillBar() {
-      const w = window.innerWidth;
-      const h = window.innerHeight;
-      const totalPerimeter = 2 * (w + h);
+  let elapsed = 0;
+  let maxTime = isTurbo ? 60 : 30;
+  const updateFrequency = 100;
 
-      // fraction of total perimeter to fill
-      let fillPx = (elapsed / maxTime) * totalPerimeter;
-
-      // 1) TOP: fill left → right
-      const fillTop = Math.min(fillPx, w);
-      document.getElementById("fill-top").style.width = fillTop + "px";
-      fillPx -= fillTop;
-
-      // 2) RIGHT: fill top → bottom
-      const fillRight = Math.min(fillPx, h);
-      document.getElementById("fill-right").style.height = fillRight + "px";
-      fillPx -= fillRight;
-
-      // 3) BOTTOM: fill right → left
-      const fillBottom = Math.min(fillPx, w);
-      document.getElementById("fill-bottom").style.width = fillBottom + "px";
-      fillPx -= fillBottom;
-
-      // 4) LEFT: fill bottom → top
-      const fillLeft = Math.min(fillPx, h);
-      document.getElementById("fill-left").style.height = fillLeft + "px";
-      // no need to subtract fillLeft at the end
+  // Load cookie value into elapsed (for turbo pages only)
+  if (isTurbo) {
+    const match = document.cookie.match(new RegExp(`${turboCookieKey}=([^;]+)`));
+    if (match) {
+      elapsed = parseFloat(match[1]) || 0;
     }
+  }
 
-    function startTimer() {
-      // If the timer has never started, set up the interval
-      if (!timerStarted) {
-        timerStarted = true;
-        elapsed = 0;
-        
-        intervalId = setInterval(() => {
-          // Only advance time if not paused
-          if (!isPaused) {
-            elapsed += updateFrequency / 1000; 
-            if (elapsed >= maxTime) {
-              elapsed = maxTime;
-              clearInterval(intervalId);
-            }
-            updateFillBar();
+  function updateFillBar() {
+    const w = window.innerWidth;
+    const h = window.innerHeight;
+    const totalPerimeter = 2 * (w + h);
+
+    let fillPx = (elapsed / maxTime) * totalPerimeter;
+
+    const fillTop = Math.min(fillPx, w);
+    document.getElementById("fill-top").style.width = fillTop + "px";
+    fillPx -= fillTop;
+
+    const fillRight = Math.min(fillPx, h);
+    document.getElementById("fill-right").style.height = fillRight + "px";
+    fillPx -= fillRight;
+
+    const fillBottom = Math.min(fillPx, w);
+    document.getElementById("fill-bottom").style.width = fillBottom + "px";
+    fillPx -= fillBottom;
+
+    const fillLeft = Math.min(fillPx, h);
+    document.getElementById("fill-left").style.height = fillLeft + "px";
+  }
+
+  function saveTurboCookie() {
+    if (isTurbo) {
+      const value = Math.floor(elapsed * 10) / 10; // More precision
+      document.cookie = `${turboCookieKey}=${value}; path=/; max-age=3600`;
+    }
+  }
+
+  function deleteTurboCookie() {
+    document.cookie = `${turboCookieKey}=; path=/; max-age=0`;
+  }
+
+  function startTimer() {
+    if (!timerStarted) {
+      timerStarted = true;
+
+      intervalId = setInterval(() => {
+        if (!isPaused) {
+          elapsed += updateFrequency / 1000;
+          if (elapsed >= maxTime) {
+            elapsed = maxTime;
+            clearInterval(intervalId);
+            deleteTurboCookie(); // Clear cookie at end
+            // Play the end sound
+            const endAudio = document.getElementById("end-sound");
+            endAudio.play().catch(() => {
+              console.log("End sound playback was blocked.");
+            });
+          } else {
+            saveTurboCookie(); // Sync every tick
           }
-        }, updateFrequency);
-      }
-    }
-
-    // Pressing the "X" key advances time by +5s and plays the sound
-    function handleWrong() {
-      if (!timerStarted) return;
-      // Even if paused, we can add time
-      elapsed += 5;
-      if (elapsed > maxTime) {
-        elapsed = maxTime; // clamp if we don't want to exceed total
-      }
-      updateFillBar();
-
-      // Attempt to play the audio
-      const audio = document.getElementById("wrong-sound");
-      audio.play().catch(() => {
-        console.log("Audio playback was blocked.");
-      });
-    }
-
-    // Toggles paused state (only if the timer is running)
-    function togglePause() {
-      if (timerStarted) {
-        isPaused = !isPaused;
-      }
-    }
-
-    // Listen for keydown events:
-    // - Enter: start if not started, otherwise pause/resume
-    // - X: add 5s and play "wrong" sound
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Enter") {
-        if (!timerStarted) {
-          startTimer(); 
-        } else {
-          togglePause(); 
+          updateFillBar();
         }
-      } else if (e.key.toUpperCase() === "X") {
-        handleWrong();
-      }
+      }, updateFrequency);
+    }
+  }
+
+  function handleWrong() {
+    if (!timerStarted) return;
+    elapsed += 5;
+    if (elapsed > maxTime) elapsed = maxTime;
+    updateFillBar();
+    saveTurboCookie(); // sync immediately
+
+    const audio = document.getElementById("wrong-sound");
+    audio.play().catch(() => {
+      console.log("Audio playback was blocked.");
     });
-  </script>
+  }
+
+  function togglePause() {
+    if (timerStarted) {
+      isPaused = !isPaused;
+      if (isTurbo) saveTurboCookie(); // sync on pause too
+    }
+  }
+
+  function resetTimer() {
+    clearInterval(intervalId);
+    elapsed = 0;
+    timerStarted = false;
+    isPaused = false;
+    intervalId = null;
+    deleteTurboCookie();
+    updateFillBar();
+  }
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      if (!timerStarted) {
+        startTimer();
+      } else {
+        togglePause();
+      }
+    } else if (e.key.toUpperCase() === "X") {
+      handleWrong();
+    } else if (e.key.toUpperCase() === "R") {
+      resetTimer();
+    }
+  });
+
+  // Fill bar from initial value (including turbo cookie)
+  updateFillBar();
+</script>
+
 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script><script  src="../script.js"></script>
 
