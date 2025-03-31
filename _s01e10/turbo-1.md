@@ -1,6 +1,6 @@
 ---
 layout: board
-question: When I'm at the bar, I like to ___________ 
+question: The best thing about the South is ___________ 
 answers:
-  - Drink
+  - Food
 ---
