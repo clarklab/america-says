@@ -1,8 +1,8 @@
 ---
 layout: board
-question: When I hear the word vampire, I think of ___________
+question: When I think about Julia Roberts, I think of ___________
 answers:
-  - Blood
-  - Dracula
-  - Garlic
+  - Pretty Woman
+  - Beauty
+  - Her Smile
 ---

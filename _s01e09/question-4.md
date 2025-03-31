@@ -1,12 +1,12 @@
 ---
 layout: board
-question: I'd love to go scuba diving, it would be amazing to see _____________
+question: My favorite flower is a _____________
 answers:
-  - Coral
-  - Great Barrier Reef
-  - Fish
-  - Shipwrecks
-  - Dolphins
-  - Sharks
-  - Octopus
+  - Tulip
+  - Sunflower
+  - Orchid
+  - Rose
+  - Daisy
+  - Lily
+  - Gardenia
 ---

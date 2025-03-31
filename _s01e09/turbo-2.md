@@ -1,7 +1,7 @@
 ---
 layout: board
-question: When faced with a tough decision, I go to my ___________ for advice
+question: You can't be a good clown without the ___________
 answers:
-  - Parents
-  - Spouse
+  - Red Nose
+  - Makeup
 ---

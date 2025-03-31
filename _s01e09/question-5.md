@@ -1,12 +1,12 @@
 ---
 layout: board
-question: A chore I secretly love is _____________
+question: My favorite thing to wake up to is _____________
 answers:
-  - Cooking
-  - Mowing the Lawn
-  - Laundry
-  - Ironing
-  - Washing Dishes
-  - Dusting
-  - Vacuuming
+  - Sunshine
+  - Cat Purring
+  - Breakfast
+  - Coffee
+  - Spouse
+  - Music
+  - TV
 ---

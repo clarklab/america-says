@@ -1,9 +1,9 @@
 ---
 layout: board
-question: There's nothing more satisfying than squeezing ___________
+question: If I were face-to-face with a bear, the first thin I'd do is ___________
 answers:
-  - Lemons
-  - Pimples
-  - The Charmin
-  - Babies
+  - Run
+  - Freeze
+  - Play Dead
+  - Pray
 ---

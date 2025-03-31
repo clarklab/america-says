@@ -1,12 +1,12 @@
 ---
 layout: board
-question: When I think of Beyonce, I think of ___________
+question: When I think about golf, I think of ___________
 answers:
-  - Jay-Z
-  - Destiny's Child
-  - Dancing
-  - Music
-  - Singing
-  - Single Ladies
-  - Booty
+  - Arnold Palmer
+  - Jack Nicklaus
+  - Hole in One
+  - Tiger Woods
+  - Clubs
+  - Greens
+  - Caddy Shack
 ---

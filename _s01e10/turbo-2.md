@@ -1,7 +1,7 @@
 ---
 layout: board
-question: When faced with a tough decision, I go to my ___________ for advice
+question: You can tell it's St. Patrick's day whne you see a lot of ___________
 answers:
-  - Parents
-  - Spouse
+  - Green
+  - Shamrocks
 ---

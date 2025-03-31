@@ -1,8 +1,8 @@
 ---
 layout: board
-question: When I hear the word vampire, I think of ___________
+question: Diamonds are a girl's best friend, because they are ___________
 answers:
-  - Blood
-  - Dracula
-  - Garlic
+  - Expensive
+  - Shiny
+  - Beautiful
 ---

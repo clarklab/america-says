@@ -1,12 +1,12 @@
 ---
 layout: board
-question: The sexiest thing a man can wear is his ___________
+question: Of course I have diapers in my kid's diaper bag, but I also have ___________
 answers:
-  - Suit
-  - Underwear
-  - Uniform
-  - Smile
-  - Cologne
-  - Jeans
-  - Nothing
+  - Bottles
+  - Powder
+  - Pacifiers
+  - Wipes
+  - Forumula
+  - Toys
+  - Snacks
 ---

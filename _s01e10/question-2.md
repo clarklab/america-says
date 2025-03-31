@@ -1,12 +1,12 @@
 ---
 layout: board
-question: The sexiest thing a man can wear is his ___________
+question: The best thing about Star Wars is ___________
 answers:
-  - Suit
-  - Underwear
-  - Uniform
-  - Smile
-  - Cologne
-  - Jeans
-  - Nothing
+  - Special Effects
+  - Chewbacca
+  - The Force
+  - R2-D2
+  - Lightsabers
+  - Princess Leia
+  - Han Solo
 ---

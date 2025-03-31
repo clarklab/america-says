@@ -1,12 +1,12 @@
 ---
 layout: board
-question: When I think of crunchy food, my mind goes straight to ___________
+question: ___________ is the scariest movie of all time
 answers:
-  - Peanuts
-  - Cereal
-  - Apples
-  - Chips
-  - Popcorn
-  - Tacos
-  - Granola
+  - Halloween
+  - Psycho
+  - Jaws
+  - Saw
+  - The Exorcist
+  - It
+  - Scream
 ---

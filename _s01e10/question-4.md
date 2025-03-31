@@ -1,12 +1,12 @@
 ---
 layout: board
-question: I'd love to go scuba diving, it would be amazing to see _____________
+question: You can't have a career as a _____________ if you have laryngitis
 answers:
-  - Coral
-  - Great Barrier Reef
-  - Fish
-  - Shipwrecks
-  - Dolphins
-  - Sharks
-  - Octopus
+  - Announcer
+  - Ventriloquist
+  - Politician
+  - Singer
+  - Teacher
+  - Disc Jockey
+  - Auctioneer
 ---

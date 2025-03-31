@@ -1,9 +1,9 @@
 ---
 layout: board
-question: There's nothing more satisfying than squeezing ___________
+question: If you look in the back of my closest, you'll find ___________
 answers:
-  - Lemons
-  - Pimples
-  - The Charmin
-  - Babies
+  - Dust
+  - Shoes
+  - Clothes
+  - Boxes
 ---

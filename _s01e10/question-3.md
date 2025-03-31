@@ -1,12 +1,12 @@
 ---
 layout: board
-question: When I think of crunchy food, my mind goes straight to ___________
+question: The best football team in America has to be the ___________
 answers:
-  - Peanuts
-  - Cereal
-  - Apples
-  - Chips
-  - Popcorn
-  - Tacos
-  - Granola
+  - Eagles
+  - Packers
+  - Giants
+  - Bears
+  - Patriots
+  - Cowboys
+  - Steelers
 ---

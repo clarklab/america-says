@@ -1,6 +1,6 @@
 ---
 layout: board
-question: When I'm at the bar, I like to ___________ 
+question: The older a man gets, the bigger his ___________ get
 answers:
-  - Drink
+  - Ears
 ---

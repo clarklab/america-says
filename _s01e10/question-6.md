@@ -1,12 +1,12 @@
 ---
 layout: board
-question: When I think of Beyonce, I think of ___________
+question: My favorite internet videos always have ___________ in them
 answers:
-  - Jay-Z
-  - Destiny's Child
-  - Dancing
   - Music
-  - Singing
-  - Single Ladies
-  - Booty
+  - Sports
+  - Puppies
+  - Cats
+  - Falls
+  - People
+  - Kids
 ---

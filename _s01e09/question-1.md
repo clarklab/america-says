@@ -1,13 +1,13 @@
 ---
 layout: board
-question: I think the most famous landmark is the ____________
+question: I'm no professional chef, but even I can make ____________
 answers:
-  - Eiffel Tower
-  - Washington Monument
-  - White House
-  - Statue of Liberty
-  - Liberty Bell
-  - Grand Canyon
-  - Pyramids
+  - Spaghetti
+  - Hot Dogs
+  - Cake
+  - Eggs
+  - Salad
+  - Toast
+  - Rice
 ---
 
