@@ -32,9 +32,9 @@ github_username:  jekyll
 collections:
   sample:
     output: true
-  s01e01:
+  s01e01_:
     output: true
-  s01e02:
+  s01e02_:
     output: true
   s01e03:
     output: true
@@ -51,6 +51,14 @@ collections:
   s01e09:
     output: true
   s01e10:
+    output: true
+  s01e11:
+    output: true
+  s01e12:
+    output: true
+  s01e13:
+    output: true
+  s01e14:
     output: true
 
 # Build settings

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>America Says</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,700&family=Roboto+Mono:wght@300..700" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="../style.css">
+
+  <!-- Open Graph (used by Facebook, LinkedIn, etc.) -->
+  <meta property="og:image" content="/social.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="/social.png" />
+
+
+</head>
+
+  
+  
+
+<body class="verbose">
+
+  <div class="border-empty top"></div>
+  <div class="border-empty right"></div>
+  <div class="border-empty bottom"></div>
+  <div class="border-empty left"></div>
+
+  <div class="border-fill top" id="fill-top"></div>
+  <div class="border-fill right" id="fill-right"></div>
+  <div class="border-fill bottom" id="fill-bottom"></div>
+  <div class="border-fill left" id="fill-left"></div>
+
+  <audio id="wrong-sound" src="../wrong.m4a" preload="auto"></audio>
+  <audio id="end-sound" src="../end.mp3" preload="auto"></audio>
+  <audio id="out-of-turn" src="../out-of-turn.mp3" preload="auto"></audio>
+
+
+
+
+
+<a href="/" class="home-link">
+<span class="material-symbols-sharp">
+home
+</span>
+</a>
+
+<ol class="nav">
+
+
+  
+
+  
+      <li>
+  
+
+
+        <a data-url="/ques" href="/s01e01_/question-1.html">&nbsp;</a>
+      </li>
+
+   
+
+
+  
+
+  
+      <li>
+  
+
+
+        <a data-url="/ques" href="/s01e01_/question-2.html">&nbsp;</a>
+      </li>
+
+   
+
+
+  
+
+  
+      <li class="active">
+  
+
+
+        <a data-url="/ques" href="/s01e01_/question-3.html">&nbsp;</a>
+      </li>
+
+   
+
+
+  
+
+  
+      <li>
+  
+
+
+        <a data-url="/ques" href="/s01e01_/question-4.html">&nbsp;</a>
+      </li>
+
+   
+
+
+  
+
+  
+      <li>
+  
+
+
+        <a data-url="/ques" href="/s01e01_/question-5.html">&nbsp;</a>
+      </li>
+
+   
+
+
+  
+
+  
+      <li>
+  
+
+
+        <a data-url="/ques" href="/s01e01_/question-6.html">&nbsp;</a>
+      </li>
+
+   
+
+
+  
+
+  
+      <li>
+  
+
+
+        <a data-url="/turb" href="/s01e01_/turbo-1.html">&nbsp;</a>
+      </li>
+
+   
+
+
+  
+
+  
+      <li>
+  
+
+
+        <a data-url="/turb" href="/s01e01_/turbo-2.html">&nbsp;</a>
+      </li>
+
+   
+
+
+  
+
+  
+      <li>
+  
+
+
+        <a data-url="/turb" href="/s01e01_/turbo-3.html">&nbsp;</a>
+      </li>
+
+   
+
+
+  
+
+  
+      <li>
+  
+
+
+        <a data-url="/turb" href="/s01e01_/turbo-4.html">&nbsp;</a>
+      </li>
+
+   
+
+</ol>
+
+
+  <div class="wrong">
+X
+  </div>
+
+  <div class="turn">
+OUT OF<br>
+TURN
+  </div>
+
+<div class="question">
+  When I think of Hawaii, I think of ___________ has to take an oath
+</div>
+
+<div class="answers hidden">
+
+
+
+
+<div class="answer">
+  <span class="underline">
+    <span class="text">pineapple</span>
+  </span>
+</div>
+
+
+
+
+
+
+<div class="answer space"><span class="underline"><span class="text">hula</span></span><span class="underline"><span class="text">dancers</span></span></div>
+
+
+
+
+
+<div class="answer">
+  <span class="underline">
+    <span class="text">surfing</span>
+  </span>
+</div>
+
+
+
+
+<div class="answer">
+  <span class="underline">
+    <span class="text">leis</span>
+  </span>
+</div>
+
+
+
+
+<div class="answer">
+  <span class="underline">
+    <span class="text">beachers</span>
+  </span>
+</div>
+
+
+
+
+<div class="answer">
+  <span class="underline">
+    <span class="text">volcanoes</span>
+  </span>
+</div>
+
+
+
+
+
+
+<div class="answer space"><span class="underline"><span class="text">palm</span></span><span class="underline"><span class="text">trees</span></span></div>
+
+
+
+
+</div>
+
+<script>
+  let timerStarted = false;
+  let isPaused = false;
+  let intervalId = null;
+
+  const isTurbo = document.body.classList.contains("turbo");
+  const turboCookieKey = "turboTime";
+
+  let elapsed = 0;
+  let maxTime = isTurbo ? 60 : 30;
+  const updateFrequency = 100;
+
+  // Load cookie value into elapsed (for turbo pages only)
+  if (isTurbo) {
+    const match = document.cookie.match(new RegExp(`${turboCookieKey}=([^;]+)`));
+    if (match) {
+      elapsed = parseFloat(match[1]) || 0;
+    }
+  }
+
+  function updateFillBar() {
+    const w = window.innerWidth;
+    const h = window.innerHeight;
+    const totalPerimeter = 2 * (w + h);
+
+    let fillPx = (elapsed / maxTime) * totalPerimeter;
+
+    const fillTop = Math.min(fillPx, w);
+    document.getElementById("fill-top").style.width = fillTop + "px";
+    fillPx -= fillTop;
+
+    const fillRight = Math.min(fillPx, h);
+    document.getElementById("fill-right").style.height = fillRight + "px";
+    fillPx -= fillRight;
+
+    const fillBottom = Math.min(fillPx, w);
+    document.getElementById("fill-bottom").style.width = fillBottom + "px";
+    fillPx -= fillBottom;
+
+    const fillLeft = Math.min(fillPx, h);
+    document.getElementById("fill-left").style.height = fillLeft + "px";
+  }
+
+  function saveTurboCookie() {
+    if (isTurbo) {
+      const value = Math.floor(elapsed * 10) / 10; // More precision
+      document.cookie = `${turboCookieKey}=${value}; path=/; max-age=3600`;
+    }
+  }
+
+  function deleteTurboCookie() {
+    document.cookie = `${turboCookieKey}=; path=/; max-age=0`;
+  }
+
+  function startTimer() {
+    if (!timerStarted) {
+      timerStarted = true;
+
+      intervalId = setInterval(() => {
+        if (!isPaused) {
+          elapsed += updateFrequency / 1000;
+          if (elapsed >= maxTime) {
+            elapsed = maxTime;
+            clearInterval(intervalId);
+            deleteTurboCookie(); // Clear cookie at end
+            // Play the end sound
+            const endAudio = document.getElementById("end-sound");
+            endAudio.play().catch(() => {
+              console.log("End sound playback was blocked.");
+            });
+          } else {
+            saveTurboCookie(); // Sync every tick
+          }
+          updateFillBar();
+        }
+      }, updateFrequency);
+    }
+  }
+
+  function handleWrong() {
+    if (!timerStarted) return;
+    elapsed += 5;
+    if (elapsed > maxTime) elapsed = maxTime;
+    updateFillBar();
+    saveTurboCookie(); // sync immediately
+
+    const audio = document.getElementById("out-of-turn");
+    $(".turn").animate({opacity:1},100).delay(100).animate({opacity:0},100)
+    audio.play().catch(() => {
+      console.log("Audio playback was blocked.");
+    });
+  }
+
+  function togglePause() {
+    if (timerStarted) {
+      isPaused = !isPaused;
+      if (isTurbo) saveTurboCookie(); // sync on pause too
+    }
+  }
+
+  function resetTimer() {
+    clearInterval(intervalId);
+    elapsed = 0;
+    timerStarted = false;
+    isPaused = false;
+    intervalId = null;
+    deleteTurboCookie();
+    updateFillBar();
+  }
+
+  document.addEventListener("keydown", (e) => {
+  const answersDiv = document.querySelector(".answers");
+  if (answersDiv) {
+    answersDiv.classList.add("show");
+  }
+
+  if (e.key === "Enter") {
+    if (!timerStarted) {
+      startTimer();
+    } else {
+      togglePause();
+    }
+  } else if (e.key.toUpperCase() === "X") {
+    handleWrong();
+  } else if (e.key.toUpperCase() === "R") {
+    resetTimer();
+  }
+});
+
+
+  // Fill bar from initial value (including turbo cookie)
+  updateFillBar();
+</script>
+
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script><script  src="../script.js"></script>
+
+
+
+</body>
+</html>

@@ -1,14 +1,4 @@
 
-.hidden{
-  height:0 !important;
-  opacity: 0 !important;
-  transition: .5s ease all;
-}
-.show{
-  height: auto !important;
-  opacity: 1 !important;
-
-}
 
 ol.nav{
   position: absolute;
@@ -108,6 +98,17 @@ body{
   overflow: hidden;
 }
 
+
+.hidden{
+  height:0 !important;
+  opacity: 0 !important;
+  transition: .5s ease all;
+}
+.show{
+  height: auto !important;
+  opacity: 1 !important;
+}
+
 .answers{
   display: flex;
   flex-wrap: wrap;
@@ -130,6 +131,23 @@ body{
   top: 50%;
   left: 50%;
   font-size: 500px;
+  font-weight: 700;
+  color: red;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-text-stroke: 12px #fff;
+  text-shadow: 15px 15px 25px rgba(0, 0, 0, 1);
+}
+
+.turn{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 200px;
+  width:100%;
+  line-height: 1;
   font-weight: 700;
   color: red;
   transform: translate(-50%, -50%);
@@ -247,7 +265,7 @@ align-items: center;
   font-size:8vw;
   font-weight:700;
   font-family: "Roboto Condensed";
-  margin: 0rem 3rem;
+  margin: 0rem 3rem 2rem;
   padding: 2rem;
   font-style: italic;
   text-shadow: 4px 4px 4px rgba(0, 0, 0,0.5);
@@ -290,7 +308,7 @@ align-items: center;
 
 body.home .games{
   position: absolute;
-  bottom: 2rem;
+  bottom: 3rem;
   padding: 0;
   margin: 0;
   font-size: 1.25rem;

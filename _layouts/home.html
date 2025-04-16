@@ -27,8 +27,8 @@
   America Says
 </div>
 
-<select class="games" name='m-menu' onfocus="this.selectedIndex = 0" onchange='location = this.options[this.selectedIndex].value;'>
-      <option value="">Select an Episode</option>
+<select class="games" style="transform:scale(2);" name='m-menu' onfocus="this.selectedIndex = 0" onchange='location = this.options[this.selectedIndex].value;'>
+      <option value="">Episode</option>
     {% for collection in site.collections %}
     {% for item in site[collection.label] %}
       {% if forloop.first == true %}

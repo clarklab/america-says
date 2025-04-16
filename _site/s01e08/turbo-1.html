@@ -39,6 +39,8 @@
 
   <audio id="wrong-sound" src="../wrong.m4a" preload="auto"></audio>
   <audio id="end-sound" src="../end.mp3" preload="auto"></audio>
+  <audio id="out-of-turn" src="../out-of-turn.mp3" preload="auto"></audio>
+
 
 
 
@@ -188,6 +190,11 @@ home
 X
   </div>
 
+  <div class="turn">
+OUT OF<br>
+TURN
+  </div>
+
 <div class="question">
   You were definitely cooler in high school if you had a ___________
 </div>
@@ -293,7 +300,8 @@ X
     updateFillBar();
     saveTurboCookie(); // sync immediately
 
-    const audio = document.getElementById("wrong-sound");
+    const audio = document.getElementById("out-of-turn");
+    $(".turn").animate({opacity:1},100).delay(100).animate({opacity:0},100)
     audio.play().catch(() => {
       console.log("Audio playback was blocked.");
     });
