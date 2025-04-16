@@ -1,7 +1,7 @@
 ---
 layout: board
-question: You can tell it's St. Patrick's day whne you see a lot of ___________
+question: ___________ is an expense that comes with owning a car
 answers:
-  - Green
-  - Shamrocks
+  - Insurance
+  - Gas
 ---

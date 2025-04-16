@@ -1,8 +1,8 @@
 ---
 layout: board
-question: When I think about Julia Roberts, I think of ___________
+question: You could desribe ___________ as "very dry"
 answers:
-  - Pretty Woman
-  - Beauty
-  - Her Smile
+  - Desert
+  - Martini
+  - Sense of Humor
 ---

@@ -1,8 +1,8 @@
 ---
 layout: board
-question: When I think about Julia Roberts, I think of ___________
+question: If I rent a beach house, I want it to have a ___________
 answers:
-  - Pretty Woman
-  - Beauty
-  - Her Smile
+  - Pool
+  - Hot Tub
+  - View
 ---

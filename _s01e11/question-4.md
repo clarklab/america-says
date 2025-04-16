@@ -1,12 +1,12 @@
 ---
 layout: board
-question: You can't have a career as a _____________ if you have laryngitis
+question: We got some great Halloween photos this year when we went as a family of  _____________
 answers:
-  - Announcer
-  - Ventriloquist
-  - Politician
-  - Singer
-  - Teacher
-  - Disc Jockey
-  - Auctioneer
+  - Vampires
+  - Superheroes
+  - Pumpkins
+  - Ghosts
+  - Zombies
+  - Clowns
+  - Witches
 ---

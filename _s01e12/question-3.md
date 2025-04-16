@@ -1,12 +1,12 @@
 ---
 layout: board
-question: The best football team in America has to be the ___________
+question: You'll find ___________ in big cities, but not in small towns
 answers:
-  - Eagles
-  - Packers
-  - Giants
-  - Bears
-  - Patriots
-  - Cowboys
-  - Steelers
+  - Museums
+  - Airports
+  - Subways
+  - Skyscrapers
+  - Traffic
+  - Taxis
+  - Buses
 ---

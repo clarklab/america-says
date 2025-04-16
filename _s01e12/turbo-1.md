@@ -1,6 +1,6 @@
 ---
 layout: board
-question: The best thing about the South is ___________ 
+question: The first ting that pops into my head when I think of George Washington is ___________ 
 answers:
-  - Food
+  - Dollar Bills
 ---

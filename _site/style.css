@@ -206,7 +206,7 @@ body{
 }
 
 body:not(.turbo) .answer:nth-child(even){
-  margin-top: 2rem;
+  margin-top: 2.5rem;
 }
 
 .answer.reveal .text{
@@ -236,7 +236,7 @@ body:not(.turbo) .answer:nth-child(even){
 
 .verbose .answer{
   font-size: 3.75vw;
-  margin-bottom:2rem;
+  margin-bottom:4rem;
 }
 .verbose .answer .text{
   clip-path: inset(0 calc(100% - 2.25vw) 0 0);
@@ -254,7 +254,7 @@ body:not(.turbo) .answer:nth-child(even){
 }
 
 .answer.space .underline:not(:first-child){
-margin-left: 2vw;
+margin-left: 1vw;
 }
 
 body.home{
@@ -354,7 +354,7 @@ body{
 }
 
 .answer.space .underline{
-  margin-right: 3vw;
+  margin-right: 1vw;
 }
 
 .wrong{

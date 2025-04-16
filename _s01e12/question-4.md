@@ -1,12 +1,12 @@
 ---
 layout: board
-question: You can't have a career as a _____________ if you have laryngitis
+question: A word I often hear when I'm pumping iron at the gym is _____________
 answers:
-  - Announcer
-  - Ventriloquist
-  - Politician
-  - Singer
-  - Teacher
-  - Disc Jockey
-  - Auctioneer
+  - Harder
+  - Breathe
+  - Reps
+  - Push
+  - More
+  - Spot
+  - Lift
 ---

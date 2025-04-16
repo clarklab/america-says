@@ -1,12 +1,12 @@
 ---
 layout: board
-question: My favorite internet videos always have ___________ in them
+question: My kid wants to take their ___________ with them wherever they go
 answers:
-  - Music
-  - Sports
-  - Puppies
-  - Cats
-  - Falls
-  - People
-  - Kids
+  - Blanket
+  - Stuffed Animal
+  - Friend
+  - Tablet
+  - Phone
+  - Doll
+  - Dog
 ---

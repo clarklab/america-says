@@ -1,6 +1,6 @@
 ---
 layout: board
-question: The best thing about the South is ___________ 
+question: My sister is so talented! She weaves ___________ 
 answers:
-  - Food
+  - Hair
 ---

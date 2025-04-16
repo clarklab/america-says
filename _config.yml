@@ -56,10 +56,6 @@ collections:
     output: true
   s01e12:
     output: true
-  s01e13:
-    output: true
-  s01e14:
-    output: true
 
 # Build settings
 theme: minima

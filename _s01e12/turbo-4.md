@@ -1,9 +1,9 @@
 ---
 layout: board
-question: If I were face-to-face with a bear, the first thin I'd do is ___________
+question: Teenagers today wait in long lines to whenever there's a new ___________
 answers:
-  - Run
-  - Freeze
-  - Play Dead
-  - Pray
+  - Phone
+  - Movie
+  - Video Game
+  - Sneaker
 ---

@@ -1,12 +1,12 @@
 ---
 layout: board
-question: The best thing about Star Wars is ___________
+question: When I have the house all to myself, I like to ___________ in my undies
 answers:
-  - Special Effects
-  - Chewbacca
-  - The Force
-  - R2-D2
-  - Lightsabers
-  - Princess Leia
-  - Han Solo
+  - Watch TV
+  - Walk Around
+  - Exercise
+  - Dance
+  - Sleep
+  - Eat
+  - Clean
 ---

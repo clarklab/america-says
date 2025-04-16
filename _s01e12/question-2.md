@@ -1,12 +1,12 @@
 ---
 layout: board
-question: The best thing about Star Wars is ___________
+question: When Aquaman talks to the animals in the sea, I bet the ___________ are the most friendly
 answers:
-  - Special Effects
-  - Chewbacca
-  - The Force
-  - R2-D2
-  - Lightsabers
-  - Princess Leia
-  - Han Solo
+  - Jellyfish
+  - Seahorses
+  - Turtles
+  - Dolphins
+  - Whales
+  - Seals
+  - Otters
 ---
